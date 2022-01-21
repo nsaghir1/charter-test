@@ -19,16 +19,16 @@ function PointsData({ generatedData }: IProps) {
     if (fiftySpentRewardPoints > 0) points = points + 50;
 
     const hundredSpentRewardPoints = data.amount - 100;
-    if (hundredSpentRewardPoints > 0) points = points + (2 * hundredSpentRewardPoints)
+    if (hundredSpentRewardPoints > 0) points = points + (2 * hundredSpentRewardPoints);
 
     return { ...data, points }
   });
 
   //sort data
   data.map((transaction) => {
-    if (!sortedData[transaction.name]) sortedData[transaction.name] = {}
-    if (!sortedData[transaction.name][transaction.month]) return sortedData[transaction.name][transaction.month] = transaction.points
-    sortedData[transaction.name][transaction.month] = sortedData[transaction.name][transaction.month] + transaction.points
+    if (!sortedData[transaction.name]) sortedData[transaction.name] = {};
+    if (!sortedData[transaction.name][transaction.month]) return sortedData[transaction.name][transaction.month] = transaction.points;
+    sortedData[transaction.name][transaction.month] = sortedData[transaction.name][transaction.month] + transaction.points;
   })
 
   return (
