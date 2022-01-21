@@ -40,7 +40,6 @@ function PointsData({ generatedData }: IProps) {
         let totalPoints = 0;
         return <div key={name} className="customer-result">
           <b>{name}: </b>
-          {console.log(months)}
           {months.map((month) => {
             const points = data[month];
             totalPoints = totalPoints + points
