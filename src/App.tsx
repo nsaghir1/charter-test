@@ -9,7 +9,6 @@ interface IGeneratedData {
 }
 
 function App() {
-
   const [data, setData] = useState<IGeneratedData[]>([]);
 
   return (
