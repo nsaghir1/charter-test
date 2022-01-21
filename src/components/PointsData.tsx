@@ -19,7 +19,7 @@ function PointsData({ generatedData }: IProps) {
     if (fiftySpentRewardPoints > 0) points = points + 50;
 
     const hundredSpentRewardPoints = data.amount - 100;
-    if (hundredSpentRewardPoints > 0) points = points + 2 * hundredSpentRewardPoints
+    if (hundredSpentRewardPoints > 0) points = points + (2 * hundredSpentRewardPoints)
 
     return { ...data, points }
   });
