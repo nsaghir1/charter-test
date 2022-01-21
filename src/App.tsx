@@ -8,7 +8,6 @@ interface IGeneratedData {
   month: string;
 }
 
-const onGenerate = () => { }
 function App() {
 
   const [data, setData] = useState<IGeneratedData[]>([]);
